@@ -16,4 +16,6 @@ public interface  ConfigConstant {
     String APP_JSP_PATH = "smart.framework.app.jsp_path";
     String APP_ASSET_PATH = "smart.framework.app.asset_path";
 
+    //上传文件最大限制
+    String APP_UPLPAD_LIMIT = "smart.framework.app.upload_limit";
 }

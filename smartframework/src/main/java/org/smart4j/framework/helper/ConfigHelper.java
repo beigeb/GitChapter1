@@ -51,7 +51,7 @@ public final class ConfigHelper {
     /**
      * 获取应用JSP路径
      * */
-    public static String getAppBaseJspPath(){
+    public static String getAppJspPath(){
         return PropsUtil.getString ( CONFIG_PROPS,ConfigConstant.APP_JSP_PATH ,"WEB-INF/view/");
     }
 
@@ -61,4 +61,15 @@ public final class ConfigHelper {
     public static String getAppAssetPath(){
         return PropsUtil.getString ( CONFIG_PROPS,ConfigConstant.APP_ASSET_PATH,"/asset/" );
     }
+
+    /**
+     * 获取应用文件上传限制
+     *  如不在smart.properties文件中提供该配置，则上传文件的最大限制是10MB
+     */
+    public static int getAppUploadLimit(){
+        return PropsUtil.getInt ( CONFIG_PROPS,ConfigConstant.APP_UPLPAD_LIMIT,10 );
+    }
+
+
+
 }
